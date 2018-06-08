@@ -1,0 +1,198 @@
+INFO  16:05:17,347 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:11:07,188 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:11:07,193 - #2 program
+INFO  16:11:07,193 - #3 MJProgram
+INFO  16:12:50,422 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:12:50,427 - #2 program
+INFO  16:12:50,428 - #3 MJProgram
+INFO  16:14:19,100 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:14:19,105 - #2 program
+INFO  16:14:19,105 - #3 MJProgram
+ERROR 16:14:19,105 - 
+Sintaksna greska na liniji -1
+ERROR 16:14:19,105 - Fatalna greska, parsiranje se ne moze nastaviti na liniji -1
+INFO  16:37:22,067 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:37:22,085 - #2 program
+INFO  16:37:22,085 - #3 MJProgram
+ERROR 16:37:22,085 - 
+Sintaksna greska na liniji -1
+ERROR 16:37:22,085 - Fatalna greska, parsiranje se ne moze nastaviti na liniji -1
+INFO  16:37:39,473 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:37:39,487 - #2 program
+INFO  16:37:39,488 - #3 MJProgram
+INFO  16:37:39,488 - #4 {
+INFO  16:37:39,488 - #5 }
+INFO  16:37:58,078 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:37:58,094 - #2 program
+INFO  16:37:58,094 - #3 MJProgram
+INFO  16:37:58,094 - #4 {
+INFO  16:37:58,095 - #3 int
+ERROR 16:37:58,095 - 
+Sintaksna greska na liniji 2
+ERROR 16:37:58,095 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  16:38:34,813 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:38:34,830 - #2 program
+INFO  16:38:34,830 - #3 MJProgram
+INFO  16:38:34,830 - #4 {
+INFO  16:38:34,830 - #3 int
+ERROR 16:38:34,830 - 
+Sintaksna greska na liniji 2
+ERROR 16:38:34,830 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  16:39:10,406 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:39:10,421 - #2 program
+INFO  16:39:10,464 - #3 MJProgram
+INFO  16:39:10,464 - #3 int
+INFO  16:39:10,464 - #3 p
+INFO  16:39:10,465 - #13 =
+ERROR 16:39:10,466 - 
+Sintaksna greska na liniji 2
+ERROR 16:39:10,466 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  16:39:48,677 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:39:48,694 - #2 program
+INFO  16:39:48,694 - #3 MJProgram
+INFO  16:39:48,694 - #3 int
+INFO  16:39:48,695 - #3 p
+INFO  16:39:48,696 - #11 ;
+INFO  16:39:48,698 - #4 {
+INFO  16:39:48,698 - #5 }
+INFO  16:41:28,057 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:41:28,071 - #2 program
+INFO  16:41:28,071 - #3 MJProgram
+INFO  16:41:28,071 - #3 int
+INFO  16:41:28,071 - #3 p
+INFO  16:41:28,073 - #13 =
+ERROR 16:41:28,073 - 
+Sintaksna greska na liniji 2
+ERROR 16:41:28,073 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  16:41:38,639 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:41:38,657 - #2 program
+INFO  16:41:38,657 - #3 MJProgram
+INFO  16:41:38,657 - #3 int
+INFO  16:41:38,658 - #3 p
+INFO  16:41:38,659 - #13 =
+ERROR 16:41:38,659 - 
+Sintaksna greska na liniji 2
+ERROR 16:41:38,660 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  16:42:53,004 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:42:53,019 - #2 program
+INFO  16:42:53,019 - #3 MJProgram
+INFO  16:42:53,019 - #3 int
+INFO  16:42:53,020 - #3 p
+INFO  16:42:53,021 - #13 =
+ERROR 16:42:53,021 - 
+Sintaksna greska na liniji 2
+ERROR 16:42:53,021 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  16:43:14,398 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:43:14,414 - #2 program
+INFO  16:43:14,414 - #3 MJProgram
+INFO  16:43:14,414 - #3 int
+INFO  16:43:14,415 - #3 p
+INFO  16:43:14,416 - #13 =
+ERROR 16:43:14,416 - 
+Sintaksna greska na liniji 2
+ERROR 16:43:14,416 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2
+INFO  16:43:39,848 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:43:39,864 - #2 program
+INFO  16:43:39,864 - #3 MJProgram
+INFO  16:43:39,864 - #3 int
+INFO  16:43:39,867 - #3 p
+INFO  16:43:39,869 - #12 ,
+INFO  16:43:39,870 - #3 q
+INFO  16:43:39,870 - #16 [
+INFO  16:43:39,870 - #17 ]
+INFO  16:43:39,870 - #11 ;
+INFO  16:43:39,871 - #4 {
+INFO  16:43:39,871 - #5 }
+INFO  16:45:17,926 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:45:17,942 - #2 program
+INFO  16:45:17,943 - #3 MJProgram
+INFO  16:45:17,943 - #3 int
+INFO  16:45:17,943 - #3 p
+INFO  16:45:17,945 - #12 ,
+INFO  16:45:17,946 - #3 q
+INFO  16:45:17,946 - #16 [
+INFO  16:45:17,946 - #17 ]
+INFO  16:45:17,946 - #11 ;
+INFO  16:45:17,947 - #10 const
+INFO  16:45:17,947 - #3 int
+INFO  16:45:17,948 - #3 g
+INFO  16:45:17,948 - #13 =
+INFO  16:45:17,948 - #14 5
+INFO  16:45:17,948 - #11 ;
+INFO  16:45:17,949 - #4 {
+INFO  16:45:17,949 - #5 }
+INFO  16:45:34,562 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:45:34,580 - #2 program
+INFO  16:45:34,580 - #3 MJProgram
+INFO  16:45:34,580 - #3 int
+INFO  16:45:34,581 - #3 p
+INFO  16:45:34,582 - #12 ,
+INFO  16:45:34,583 - #3 q
+INFO  16:45:34,583 - #16 [
+INFO  16:45:34,583 - #17 ]
+INFO  16:45:34,583 - #11 ;
+INFO  16:45:34,584 - #10 const
+INFO  16:45:34,584 - #3 int
+INFO  16:45:34,584 - #3 g
+INFO  16:45:34,585 - #13 =
+INFO  16:45:34,585 - #14 5
+INFO  16:45:34,585 - #12 ,
+INFO  16:45:34,586 - #3 k
+INFO  16:45:34,586 - #13 =
+INFO  16:45:34,586 - #18 true
+INFO  16:45:34,587 - #11 ;
+INFO  16:45:34,588 - #4 {
+INFO  16:45:34,588 - #5 }
+INFO  16:46:14,907 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:46:14,923 - #2 program
+INFO  16:46:14,923 - #3 MJProgram
+INFO  16:46:14,923 - #3 int
+INFO  16:46:14,924 - #3 p
+INFO  16:46:14,925 - #12 ,
+INFO  16:46:14,926 - #3 q
+INFO  16:46:14,927 - #16 [
+INFO  16:46:14,927 - #17 ]
+INFO  16:46:14,927 - #11 ;
+INFO  16:46:14,927 - #10 const
+INFO  16:46:14,928 - #3 int
+INFO  16:46:14,928 - #3 g
+INFO  16:46:14,928 - #13 =
+INFO  16:46:14,928 - #14 5
+INFO  16:46:14,929 - #12 ,
+INFO  16:46:14,931 - #3 k
+INFO  16:46:14,931 - #13 =
+INFO  16:46:14,931 - #18 true
+INFO  16:46:14,931 - #11 ;
+INFO  16:46:14,932 - #10 const
+INFO  16:46:14,932 - #3 boolean
+INFO  16:46:14,932 - #3 b
+INFO  16:46:14,934 - #13 =
+INFO  16:46:14,934 - #18 true
+INFO  16:46:14,934 - #11 ;
+INFO  16:46:14,934 - #4 {
+INFO  16:46:14,934 - #5 }
+INFO  16:46:29,058 - Compiling source file: C:\Users\Mladen\Desktop\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  16:46:29,073 - #2 program
+INFO  16:46:29,074 - #3 MJProgram
+INFO  16:46:29,074 - #3 int
+INFO  16:46:29,074 - #3 p
+INFO  16:46:29,076 - #12 ,
+INFO  16:46:29,078 - #3 q
+INFO  16:46:29,079 - #16 [
+INFO  16:46:29,079 - #17 ]
+INFO  16:46:29,079 - #11 ;
+INFO  16:46:29,081 - #10 const
+INFO  16:46:29,081 - #3 int
+INFO  16:46:29,081 - #3 g
+INFO  16:46:29,081 - #13 =
+INFO  16:46:29,081 - #14 5
+INFO  16:46:29,081 - #12 ,
+INFO  16:46:29,083 - #3 k
+INFO  16:46:29,083 - #13 =
+INFO  16:46:29,083 - #18 true
+INFO  16:46:29,083 - #12 ,
+INFO  16:46:29,084 - #3 c
+INFO  16:46:29,084 - #11 ;
+ERROR 16:46:29,084 - 
+Sintaksna greska na liniji 3
+ERROR 16:46:29,084 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3

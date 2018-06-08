@@ -1,0 +1,233 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+// import java.io.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+	
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+
+
+terminal 
+PROG, IDENT, LBRACE, RBRACE, PLUS, RPAREN, ELSE, IF, CONST, SEMIC, COMMA, EQUAL, NUMBER, CHAR, LSBRACE, RSBRACE, BOOLEAN, EXTENDS, NEW, LESS_OR_EQUAL, DOT, DIV, MINUS, PERC, VOID, AND, LPAREN, LESS, MUL, IS_EQUAL, BREAK, IS_NOT_EQUAL, READ, HIGHER, INC, WHILE, PRINT, DO, CLASS, RETURN, CONTINUE, OR, HIGHER_OR_EQUAL, DEC;
+
+nonterminal 
+Program, ProgramDeclList, ProgramDecl,
+ConstDeclWrapper, ConstDeclList, ConstDecl, ConstType,
+VarDeclWrapper, VarDeclList, VarDecl,
+Type,
+MethodDecl
+;
+
+
+Program ::= PROG IDENT ProgramDeclList LBRACE MethodDecl RBRACE ;
+
+ProgramDeclList ::= ProgramDeclList ProgramDecl
+					|
+					ProgramDecl
+					;
+
+ProgramDecl ::= ConstDeclWrapper | VarDeclWrapper;
+
+
+/*	KONSTANTE	*/
+ConstDeclWrapper ::= CONST Type ConstDeclList SEMIC;
+
+ConstDeclList ::= 	ConstDeclList COMMA ConstDecl
+					|
+					ConstDecl;
+
+ConstDecl ::= IDENT EQUAL ConstType;
+
+ConstType ::= NUMBER | CHAR | BOOLEAN;
+
+
+/*	PROMENLJIVE	*/
+VarDeclWrapper ::= 	Type VarDeclList SEMIC
+					|
+					/*	epsilon */
+					;
+
+VarDeclList ::= VarDeclList COMMA VarDecl
+				|
+				VarDecl
+				;
+
+VarDecl ::= IDENT 
+			|
+			IDENT LSBRACE RSBRACE
+			;
+
+
+Type ::= IDENT;
+
+
+MethodDecl ::= MethodReturnType IDENT LPAREN FormParsList RPAREN VarDeclWrapper LBRACE StatementList RBRACE;
+
+MethodReturnType ::= Type | VOID;
+
+FormParsList ::= 	FormParsList COMMA Type VarDecl
+					|
+					Type VarDecl
+					;
+
+
+StatementList ::= 	StatementList Statement
+					|
+					/* epsilon */
+					;
+
+Statement ::= 	DesignatorStatement SEMIC
+				|
+				IF LPAREN Condition RPAREN Statement ElseWrapper
+				|
+				DO Statement WHILE LPAREN Condition RPAREN COMMA
+				|
+				BREAK COMMA
+				|
+				CONTINUE COMMA
+				|
+				ReturnWrapper COMMA
+				|
+				READ LPAREN Designator RPAREN COMMA
+				|
+				PRINT
+				|
+				LBRACE Statement RBRACE
+				;
+
+DesignatorStatement ::= Designator EQUAL Expr
+						|
+						Designator LPAREN ActPars RPAREN
+						|
+						Designator INC
+						|
+						Designator DEC
+						;
+
+ActPars ::= ActPars COMMA Expr
+			|
+			Expr
+			;
+
+Condition ::=	Condition OR CondTerm
+				|
+				CondTerm
+				;
+
+CondTerm ::=	CondTerm AND CondFact
+				|
+				CondFact
+				;
+
+CondFact ::=	Expr
+				|
+				Expr Relop Expr
+				;
+
+
+
+
+
+Factor ::= 	Designator
+			|
+			Designator LPAREN ActPars RPAREN
+			|
+			NUMBER
+			|
+			CHAR
+			|
+			BOOLEAN
+			|
+			NEW Type
+			|
+			NEW Type LSBRACE Expr RSBRACE
+			|
+			LPAREN Expr RPAREN
+			;
+
+Term ::= 	Term Mulop Factor
+			|
+			Factor
+			;
+
+
+
+Designator ::= 
+
+Relop ::=	EQUAL
+			|
+			NOT_EQUAL
+			|
+			HIGHER
+			|
+			HIGHER_OR_EQUAL
+			|
+			LESS
+			|
+			LESS_OR_EQUAL
+			;	
+
+Addop ::=	PLUS
+			|
+			MINUS
+			;
+
+Mulop ::=	MUL
+			|
+			DIV
+			|
+			PERC
+			;
+
+
+
+
+
