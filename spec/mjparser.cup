@@ -71,7 +71,7 @@ Program ::= PROG IDENT ProgramDeclList LBRACE MethodDecl RBRACE ;
 
 ProgramDeclList ::= ProgramDeclList ProgramDecl
 					|
-					ProgramDecl
+					/* epsilon */
 					;
 
 ProgramDecl ::= ConstDeclWrapper | VarDeclWrapper;
@@ -115,7 +115,9 @@ MethodReturnType ::= Type | VOID;
 
 FormParsList ::= 	FormParsList COMMA Type VarDecl
 					|
-					Type VarDecl
+					Type VarDecl 
+					|
+					/* epsilon */
 					;
 
 
@@ -128,17 +130,19 @@ Statement ::= 	DesignatorStatement SEMIC
 				|
 				IF LPAREN Condition RPAREN Statement ElseWrapper
 				|
-				DO Statement WHILE LPAREN Condition RPAREN COMMA
+				DO Statement WHILE LPAREN Condition RPAREN SEMIC
 				|
-				BREAK COMMA
+				BREAK SEMIC
 				|
-				CONTINUE COMMA
+				CONTINUE SEMIC
 				|
-				ReturnWrapper COMMA
+				ReturnWrapper SEMIC
 				|
-				READ LPAREN Designator RPAREN COMMA
+				READ LPAREN Designator RPAREN SEMIC
 				|
-				PRINT
+				PRINT LPAREN Expr RPAREN SEMIC 
+				|
+				PRINT LPAREN Expr COMMA NUMBER RPAREN SEMIC
 				|
 				LBRACE Statement RBRACE
 				;
@@ -199,8 +203,22 @@ Term ::= 	Term Mulop Factor
 			;
 
 
+Expr ::= 	Expr Addop Term
+			|
+			MINUS Term 
+			|
+			Term
+			;
 
-Designator ::= 
+
+
+Designator ::= 	Designator LSBRACE Expr RSBRACE
+				|
+				Designator DOT IDENT
+				|
+				IDENT
+				;
+
 
 Relop ::=	EQUAL
 			|
