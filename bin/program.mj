@@ -1,5 +1,8 @@
 program MJProgram 
 	int p, q[];
-	const int g=5, k=true, c;
+	const int g=5, k=true;
 {
+	void main() int lk; {
+		print(3);
+	}
 }

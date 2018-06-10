@@ -1,25 +1,335 @@
-INFO  22:08:58,902 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
-INFO  22:08:58,921 - #2 program
-INFO  22:08:58,921 - #3 MJProgram
-INFO  22:08:58,921 - #3 int
-INFO  22:08:58,922 - #3 p
-INFO  22:08:58,924 - #12 ,
-INFO  22:08:58,926 - #3 q
-INFO  22:08:58,926 - #16 [
-INFO  22:08:58,926 - #17 ]
-INFO  22:08:58,927 - #11 ;
-INFO  22:08:58,928 - #10 const
-INFO  22:08:58,930 - #3 int
-INFO  22:08:58,930 - #3 g
-INFO  22:08:58,930 - #13 =
-INFO  22:08:58,930 - #14 5
-INFO  22:08:58,930 - #12 ,
-INFO  22:08:58,931 - #3 k
-INFO  22:08:58,931 - #13 =
-INFO  22:08:58,931 - #18 true
-INFO  22:08:58,931 - #12 ,
-INFO  22:08:58,933 - #3 c
-INFO  22:08:58,933 - #11 ;
-ERROR 22:08:58,933 - 
+INFO  11:32:43,362 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:34:26,328 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:34:53,537 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:34:53,598 - #2 program
+INFO  12:34:53,600 - #3 MJProgram
+INFO  12:34:53,600 - #3 int
+INFO  12:34:53,601 - #3 p
+INFO  12:34:53,603 - #12 ,
+INFO  12:34:53,606 - #3 q
+INFO  12:34:53,606 - #16 [
+INFO  12:34:53,607 - #17 ]
+INFO  12:34:53,607 - #11 ;
+INFO  12:34:53,609 - #10 const
+INFO  12:34:53,609 - #3 int
+INFO  12:34:53,609 - #3 g
+INFO  12:34:53,610 - #13 =
+INFO  12:34:53,610 - #14 5
+INFO  12:34:53,610 - #12 ,
+INFO  12:34:53,614 - #3 k
+INFO  12:34:53,614 - #13 =
+INFO  12:34:53,614 - #18 true
+INFO  12:34:53,614 - #12 ,
+INFO  12:34:53,616 - #3 c
+INFO  12:34:53,616 - #11 ;
+ERROR 12:34:53,616 - 
 Sintaksna greska na liniji 3
-ERROR 22:08:58,933 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3
+ERROR 12:34:53,617 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3
+INFO  12:36:19,301 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:36:19,346 - #2 program
+INFO  12:36:19,347 - #3 MJProgram
+INFO  12:36:19,347 - #3 int
+INFO  12:36:19,348 - #3 p
+INFO  12:36:19,349 - #12 ,
+INFO  12:36:19,350 - #3 q
+INFO  12:36:19,351 - #16 [
+INFO  12:36:19,351 - #17 ]
+INFO  12:36:19,351 - #11 ;
+INFO  12:36:19,352 - #10 const
+INFO  12:36:19,353 - #3 int
+INFO  12:36:19,353 - #3 g
+INFO  12:36:19,353 - #13 =
+INFO  12:36:19,353 - #14 5
+INFO  12:36:19,353 - #12 ,
+INFO  12:36:19,357 - #3 k
+INFO  12:36:19,357 - #13 =
+INFO  12:36:19,357 - #18 true
+INFO  12:36:19,357 - #11 ;
+INFO  12:36:19,359 - #4 {
+INFO  12:36:19,359 - #38 print
+ERROR 12:36:19,359 - 
+Sintaksna greska na liniji 5
+ERROR 12:36:19,360 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
+INFO  12:37:06,650 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:37:06,690 - #2 program
+INFO  12:37:06,691 - #3 MJProgram
+INFO  12:37:06,691 - #3 int
+INFO  12:37:06,692 - #3 p
+INFO  12:37:06,693 - #12 ,
+INFO  12:37:06,694 - #3 q
+INFO  12:37:06,695 - #16 [
+INFO  12:37:06,695 - #17 ]
+INFO  12:37:06,695 - #11 ;
+INFO  12:37:06,695 - #10 const
+INFO  12:37:06,696 - #3 int
+INFO  12:37:06,696 - #3 g
+INFO  12:37:06,696 - #13 =
+INFO  12:37:06,696 - #14 5
+INFO  12:37:06,696 - #12 ,
+INFO  12:37:06,698 - #3 k
+INFO  12:37:06,698 - #13 =
+INFO  12:37:06,698 - #18 true
+INFO  12:37:06,698 - #11 ;
+INFO  12:37:06,699 - #4 {
+INFO  12:37:06,699 - #38 print
+ERROR 12:37:06,699 - 
+Sintaksna greska na liniji 5
+ERROR 12:37:06,699 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
+INFO  12:37:31,162 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:37:31,214 - #2 program
+INFO  12:37:31,214 - #3 MJProgram
+INFO  12:37:31,214 - #3 int
+INFO  12:37:31,214 - #3 p
+INFO  12:37:31,214 - #12 ,
+INFO  12:37:31,214 - #3 q
+INFO  12:37:31,214 - #16 [
+INFO  12:37:31,214 - #17 ]
+INFO  12:37:31,214 - #11 ;
+INFO  12:37:31,214 - #10 const
+INFO  12:37:31,222 - #3 int
+INFO  12:37:31,222 - #3 g
+INFO  12:37:31,222 - #13 =
+INFO  12:37:31,222 - #14 5
+INFO  12:37:31,222 - #12 ,
+INFO  12:37:31,226 - #3 k
+INFO  12:37:31,226 - #13 =
+INFO  12:37:31,226 - #18 true
+INFO  12:37:31,226 - #11 ;
+INFO  12:37:31,226 - #4 {
+INFO  12:37:31,226 - #42 continue
+ERROR 12:37:31,226 - 
+Sintaksna greska na liniji 5
+ERROR 12:37:31,226 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
+INFO  12:37:41,682 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:37:41,712 - #2 program
+INFO  12:37:41,712 - #3 MJProgram
+INFO  12:37:41,712 - #3 int
+INFO  12:37:41,712 - #3 p
+INFO  12:37:41,723 - #12 ,
+INFO  12:37:41,723 - #3 q
+INFO  12:37:41,723 - #16 [
+INFO  12:37:41,723 - #17 ]
+INFO  12:37:41,723 - #11 ;
+INFO  12:37:41,726 - #10 const
+INFO  12:37:41,726 - #3 int
+INFO  12:37:41,726 - #3 g
+INFO  12:37:41,726 - #13 =
+INFO  12:37:41,726 - #14 5
+INFO  12:37:41,726 - #12 ,
+INFO  12:37:41,726 - #3 k
+INFO  12:37:41,726 - #13 =
+INFO  12:37:41,726 - #18 true
+INFO  12:37:41,726 - #11 ;
+INFO  12:37:41,726 - #4 {
+INFO  12:37:41,726 - #5 }
+ERROR 12:37:41,726 - 
+Sintaksna greska na liniji 6
+ERROR 12:37:41,726 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6
+INFO  12:39:30,542 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:39:30,586 - #2 program
+INFO  12:39:30,586 - #3 MJProgram
+INFO  12:39:30,586 - #3 int
+INFO  12:39:30,586 - #3 p
+INFO  12:39:30,586 - #12 ,
+INFO  12:39:30,592 - #3 q
+INFO  12:39:30,592 - #16 [
+INFO  12:39:30,592 - #17 ]
+INFO  12:39:30,592 - #11 ;
+INFO  12:39:30,592 - #10 const
+INFO  12:39:30,592 - #3 int
+INFO  12:39:30,592 - #3 g
+INFO  12:39:30,592 - #13 =
+INFO  12:39:30,592 - #14 5
+INFO  12:39:30,592 - #12 ,
+INFO  12:39:30,592 - #3 k
+INFO  12:39:30,592 - #13 =
+INFO  12:39:30,592 - #18 true
+INFO  12:39:30,592 - #11 ;
+INFO  12:39:30,592 - #4 {
+INFO  12:39:30,592 - #5 }
+ERROR 12:39:30,602 - 
+Sintaksna greska na liniji 6
+ERROR 12:39:30,602 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6
+INFO  12:39:40,012 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:39:40,092 - #2 program
+INFO  12:39:40,095 - #3 MJProgram
+INFO  12:39:40,095 - #3 int
+INFO  12:39:40,095 - #3 p
+INFO  12:39:40,095 - #12 ,
+INFO  12:39:40,095 - #3 q
+INFO  12:39:40,095 - #16 [
+INFO  12:39:40,095 - #17 ]
+INFO  12:39:40,095 - #11 ;
+INFO  12:39:40,102 - #10 const
+INFO  12:39:40,102 - #3 int
+INFO  12:39:40,102 - #3 g
+INFO  12:39:40,102 - #13 =
+INFO  12:39:40,102 - #14 5
+INFO  12:39:40,102 - #12 ,
+INFO  12:39:40,106 - #3 k
+INFO  12:39:40,106 - #13 =
+INFO  12:39:40,106 - #18 true
+INFO  12:39:40,106 - #11 ;
+INFO  12:39:40,106 - #4 {
+INFO  12:39:40,106 - #5 }
+ERROR 12:39:40,106 - 
+Sintaksna greska na liniji 6
+ERROR 12:39:40,106 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6
+INFO  12:42:05,126 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:42:05,174 - #2 program
+INFO  12:42:05,174 - #3 MJProgram
+INFO  12:42:05,174 - #3 int
+INFO  12:42:05,181 - #3 p
+INFO  12:42:05,181 - #12 ,
+INFO  12:42:05,181 - #3 q
+INFO  12:42:05,181 - #16 [
+INFO  12:42:05,181 - #17 ]
+INFO  12:42:05,181 - #11 ;
+INFO  12:42:05,186 - #10 const
+INFO  12:42:05,186 - #3 int
+INFO  12:42:05,186 - #3 g
+INFO  12:42:05,186 - #13 =
+INFO  12:42:05,186 - #14 5
+INFO  12:42:05,186 - #12 ,
+INFO  12:42:05,186 - #3 k
+INFO  12:42:05,186 - #13 =
+INFO  12:42:05,186 - #18 true
+INFO  12:42:05,186 - #11 ;
+INFO  12:42:05,186 - #4 {
+INFO  12:42:05,186 - #5 }
+INFO  12:42:50,182 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:42:50,246 - #2 program
+INFO  12:42:50,246 - #3 MJProgram
+INFO  12:42:50,246 - #3 int
+INFO  12:42:50,246 - #3 p
+INFO  12:42:50,246 - #12 ,
+INFO  12:42:50,252 - #3 q
+INFO  12:42:50,252 - #16 [
+INFO  12:42:50,252 - #17 ]
+INFO  12:42:50,252 - #11 ;
+INFO  12:42:50,252 - #10 const
+INFO  12:42:50,252 - #3 int
+INFO  12:42:50,252 - #3 g
+INFO  12:42:50,252 - #13 =
+INFO  12:42:50,252 - #14 5
+INFO  12:42:50,252 - #12 ,
+INFO  12:42:50,257 - #3 k
+INFO  12:42:50,257 - #13 =
+INFO  12:42:50,257 - #18 true
+INFO  12:42:50,257 - #11 ;
+INFO  12:42:50,257 - #4 {
+INFO  12:42:50,257 - #26 void
+INFO  12:42:50,257 - #3 main
+INFO  12:42:50,257 - #28 (
+INFO  12:42:50,257 - #7 )
+INFO  12:42:50,257 - #4 {
+ERROR 12:42:50,262 - 
+Sintaksna greska na liniji 5
+ERROR 12:42:50,262 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
+INFO  12:43:33,266 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:43:33,316 - #2 program
+INFO  12:43:33,316 - #3 MJProgram
+INFO  12:43:33,316 - #3 int
+INFO  12:43:33,316 - #3 p
+INFO  12:43:33,322 - #12 ,
+INFO  12:43:33,322 - #3 q
+INFO  12:43:33,322 - #16 [
+INFO  12:43:33,325 - #17 ]
+INFO  12:43:33,325 - #11 ;
+INFO  12:43:33,325 - #10 const
+INFO  12:43:33,325 - #3 int
+INFO  12:43:33,325 - #3 g
+INFO  12:43:33,325 - #13 =
+INFO  12:43:33,325 - #14 5
+INFO  12:43:33,325 - #12 ,
+INFO  12:43:33,325 - #3 k
+INFO  12:43:33,325 - #13 =
+INFO  12:43:33,325 - #18 true
+INFO  12:43:33,325 - #11 ;
+INFO  12:43:33,325 - #4 {
+INFO  12:43:33,325 - #26 void
+INFO  12:43:33,332 - #3 main
+INFO  12:43:33,332 - #28 (
+INFO  12:43:33,332 - #7 )
+INFO  12:43:33,335 - #3 int
+INFO  12:43:33,335 - #3 lk
+INFO  12:43:33,335 - #13 =
+ERROR 12:43:33,335 - 
+Sintaksna greska na liniji 5
+ERROR 12:43:33,335 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
+INFO  12:44:20,421 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:44:20,476 - #2 program
+INFO  12:44:20,476 - #3 MJProgram
+INFO  12:44:20,476 - #3 int
+INFO  12:44:20,476 - #3 p
+INFO  12:44:20,482 - #12 ,
+INFO  12:44:20,486 - #3 q
+INFO  12:44:20,486 - #16 [
+INFO  12:44:20,486 - #17 ]
+INFO  12:44:20,486 - #11 ;
+INFO  12:44:20,486 - #10 const
+INFO  12:44:20,486 - #3 int
+INFO  12:44:20,486 - #3 g
+INFO  12:44:20,486 - #13 =
+INFO  12:44:20,486 - #14 5
+INFO  12:44:20,486 - #12 ,
+INFO  12:44:20,492 - #3 k
+INFO  12:44:20,492 - #13 =
+INFO  12:44:20,492 - #18 true
+INFO  12:44:20,492 - #11 ;
+INFO  12:44:20,492 - #4 {
+INFO  12:44:20,492 - #26 void
+INFO  12:44:20,492 - #3 main
+INFO  12:44:20,492 - #28 (
+INFO  12:44:20,492 - #7 )
+INFO  12:44:20,492 - #3 int
+INFO  12:44:20,492 - #3 lk
+INFO  12:44:20,492 - #11 ;
+INFO  12:44:20,492 - #4 {
+INFO  12:44:20,492 - #38 print
+INFO  12:44:20,492 - #28 (
+INFO  12:44:20,492 - #14 3
+INFO  12:44:20,492 - #7 )
+INFO  12:44:20,492 - #11 ;
+INFO  12:44:20,492 - #5 }
+INFO  12:44:20,492 - #5 }
+INFO  12:49:20,451 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:49:20,458 - #2 program
+INFO  12:49:20,458 - #3 MJProgram
+INFO  12:49:20,459 - #3 int
+INFO  12:50:35,947 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  12:50:35,996 - #2 program
+INFO  12:50:35,997 - #3 MJProgram
+INFO  12:50:35,997 - #3 int
+INFO  12:50:35,997 - #3 p
+INFO  12:50:36,000 - #12 ,
+INFO  12:50:36,006 - #3 q
+INFO  12:50:36,006 - #16 [
+INFO  12:50:36,006 - #17 ]
+INFO  12:50:36,007 - #11 ;
+INFO  12:50:36,008 - #10 const
+INFO  12:50:36,008 - #3 int
+INFO  12:50:36,008 - #3 g
+INFO  12:50:36,008 - #13 =
+INFO  12:50:36,009 - #14 5
+INFO  12:50:36,009 - #12 ,
+INFO  12:50:36,010 - #3 k
+INFO  12:50:36,010 - #13 =
+INFO  12:50:36,010 - #18 true
+INFO  12:50:36,010 - #11 ;
+INFO  12:50:36,012 - #4 {
+INFO  12:50:36,012 - #26 void
+INFO  12:50:36,013 - #3 main
+INFO  12:50:36,015 - #28 (
+INFO  12:50:36,015 - #7 )
+INFO  12:50:36,016 - #3 int
+INFO  12:50:36,017 - #3 lk
+INFO  12:50:36,017 - #11 ;
+INFO  12:50:36,017 - #4 {
+INFO  12:50:36,017 - #38 print
+INFO  12:50:36,018 - #28 (
+INFO  12:50:36,018 - #14 3
+INFO  12:50:36,018 - #7 )
+INFO  12:50:36,021 - #11 ;
+INFO  12:50:36,022 - #5 }
+INFO  12:50:36,022 - #5 }

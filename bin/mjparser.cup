@@ -63,11 +63,31 @@ Program, ProgramDeclList, ProgramDecl,
 ConstDeclWrapper, ConstDeclList, ConstDecl, ConstType,
 VarDeclWrapper, VarDeclList, VarDecl,
 Type,
-MethodDecl
+MethodDecl,
+MethodReturnType,
+FormParsList,
+StatementList,
+Statement,
+DesignatorStatement,
+ActPars,
+Condition,
+CondTerm,
+CondFact,
+Factor,
+Term,
+Expr,
+Designator,
+Relop,
+Addop,
+Mulop,
+MethodDeclList,
+VarDeclMethod
 ;
 
 
-Program ::= PROG IDENT ProgramDeclList LBRACE MethodDecl RBRACE ;
+
+
+Program ::= PROG IDENT ProgramDeclList LBRACE MethodDeclList RBRACE ;
 
 ProgramDeclList ::= ProgramDeclList ProgramDecl
 					|
@@ -90,10 +110,7 @@ ConstType ::= NUMBER | CHAR | BOOLEAN;
 
 
 /*	PROMENLJIVE	*/
-VarDeclWrapper ::= 	Type VarDeclList SEMIC
-					|
-					/*	epsilon */
-					;
+VarDeclWrapper ::= 	Type VarDeclList SEMIC;
 
 VarDeclList ::= VarDeclList COMMA VarDecl
 				|
@@ -109,7 +126,19 @@ VarDecl ::= IDENT
 Type ::= IDENT;
 
 
-MethodDecl ::= MethodReturnType IDENT LPAREN FormParsList RPAREN VarDeclWrapper LBRACE StatementList RBRACE;
+MethodDeclList ::= 	MethodDeclList MethodDecl
+					|
+					/* epsilon */
+					;
+
+MethodDecl ::= MethodReturnType IDENT LPAREN FormParsList RPAREN VarDeclMethod LBRACE StatementList RBRACE;
+
+
+VarDeclMethod ::= 	VarDeclMethod VarDeclWrapper
+					|
+					/* epsilon */
+					;
+
 
 MethodReturnType ::= Type | VOID;
 
@@ -128,7 +157,7 @@ StatementList ::= 	StatementList Statement
 
 Statement ::= 	DesignatorStatement SEMIC
 				|
-				IF LPAREN Condition RPAREN Statement ElseWrapper
+				IF LPAREN Condition RPAREN Statement
 				|
 				DO Statement WHILE LPAREN Condition RPAREN SEMIC
 				|
@@ -136,7 +165,9 @@ Statement ::= 	DesignatorStatement SEMIC
 				|
 				CONTINUE SEMIC
 				|
-				ReturnWrapper SEMIC
+				RETURN SEMIC
+				|
+				RETURN Expr SEMIC
 				|
 				READ LPAREN Designator RPAREN SEMIC
 				|
@@ -146,6 +177,8 @@ Statement ::= 	DesignatorStatement SEMIC
 				|
 				LBRACE Statement RBRACE
 				;
+
+
 
 DesignatorStatement ::= Designator EQUAL Expr
 						|
@@ -222,7 +255,7 @@ Designator ::= 	Designator LSBRACE Expr RSBRACE
 
 Relop ::=	EQUAL
 			|
-			NOT_EQUAL
+			IS_NOT_EQUAL
 			|
 			HIGHER
 			|

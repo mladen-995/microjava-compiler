@@ -1,0 +1,24 @@
+INFO  22:15:57,003 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\test\program.mj
+INFO  22:15:57,008 - #2 program
+INFO  22:15:57,008 - #3 MJProgram
+INFO  22:15:57,008 - #3 int
+INFO  22:15:57,008 - #3 p
+INFO  22:15:57,008 - #12 ,
+INFO  22:15:57,008 - #3 q
+INFO  22:15:57,008 - #16 [
+INFO  22:15:57,008 - #17 ]
+INFO  22:15:57,009 - #11 ;
+INFO  22:15:57,009 - #10 const
+INFO  22:15:57,009 - #3 int
+INFO  22:15:57,009 - #3 g
+INFO  22:15:57,009 - #13 =
+INFO  22:15:57,009 - #14 5
+INFO  22:15:57,009 - #12 ,
+INFO  22:15:57,009 - #3 k
+INFO  22:15:57,009 - #13 =
+INFO  22:15:57,009 - #18 true
+INFO  22:15:57,009 - #12 ,
+INFO  22:15:57,009 - #3 c
+INFO  22:15:57,009 - #11 ;
+INFO  22:15:57,010 - #4 {
+INFO  22:15:57,010 - #5 }
