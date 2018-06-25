@@ -56,226 +56,255 @@ scan with {:
 
 
 terminal 
-PROG, IDENT, LBRACE, RBRACE, PLUS, RPAREN, ELSE, IF, CONST, SEMIC, COMMA, EQUAL, NUMBER, CHAR, LSBRACE, RSBRACE, BOOLEAN, EXTENDS, NEW, LESS_OR_EQUAL, DOT, DIV, MINUS, PERC, VOID, AND, LPAREN, LESS, MUL, IS_EQUAL, BREAK, IS_NOT_EQUAL, READ, HIGHER, INC, WHILE, PRINT, DO, CLASS, RETURN, CONTINUE, OR, HIGHER_OR_EQUAL, DEC;
+PROG, LBRACE, RBRACE, PLUS, RPAREN, CONST, SEMIC, COMMA, EQUAL, LSBRACE, RSBRACE, NEW, DIV, MINUS, PERC, VOID, LPAREN, MUL, READ, INC, PRINT, RETURN, DEC;
+
+terminal Integer NUMBER;
+terminal Character CHAR;
+terminal String BOOLEAN;
+terminal String IDENT;
+
+
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program, Prog_Name, Designator, Method_Decl, Const_Name, Method_Name, Designator_Call_Method;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Expr, Factor, Var_Decl_List, Const_Type, Add_op, Mul_op;
+
+
+
 
 nonterminal 
-Program, ProgramDeclList, ProgramDecl,
-ConstDeclWrapper, ConstDeclList, ConstDecl, ConstType,
-VarDeclWrapper, VarDeclList, VarDecl,
-Type,
-MethodDecl,
-MethodReturnType,
-FormParsList,
-StatementList,
+Program_Decl_List, Program_Decl,
+Const_Decl_Wrapper, Const_Decl_List, Const_Decl,
+Var_Decl_Wrapper, Var_Decl,
+Method_Return_Type,
+Form_Pars_List,
+Form_Pars_List_Exists,
+Statement_List,
 Statement,
-DesignatorStatement,
-ActPars,
-Condition,
-CondTerm,
-CondFact,
-Factor,
-Term,
-Expr,
-Designator,
-Relop,
-Addop,
-Mulop,
-MethodDeclList,
-VarDeclMethod
+Designator_Statement,
+Act_Pars,
+Method_Decl_List,
+Var_Decl_Method,
+Expr_Para,
+Form_Param,
+Act_Par,
+Ar_Array,
+Ar_Last,
+Glob_Decl_Errors,
+Var_Decl_Globl_Wrapper
 ;
 
 
 
 
-Program ::= PROG IDENT ProgramDeclList LBRACE MethodDeclList RBRACE ;
+Program ::= (Program) PROG Prog_Name:p Program_Decl_List LBRACE Method_Decl_List RBRACE ;
 
-ProgramDeclList ::= ProgramDeclList ProgramDecl
-					|
-					/* epsilon */
+Prog_Name ::= (ProgName) IDENT:pName;
+
+Program_Decl_List ::= 	(ProgramDeclList) Program_Decl_List Program_Decl
+						|
+						(NoProgramDeclList) /* epsilon */
+						;
+
+Program_Decl ::= 	(ProgramDeclConst) Const_Decl_Wrapper 
+					| 
+					(ProgramDeclVar) Var_Decl_Globl_Wrapper
 					;
-
-ProgramDecl ::= ConstDeclWrapper | VarDeclWrapper;
 
 
 /*	KONSTANTE	*/
-ConstDeclWrapper ::= CONST Type ConstDeclList SEMIC;
+Const_Decl_Wrapper ::= (ConstDeclWrapper) CONST Type Const_Decl_List SEMIC;
 
-ConstDeclList ::= 	ConstDeclList COMMA ConstDecl
-					|
-					ConstDecl;
+Const_Decl_List ::= 	(ConstDeclListArray) Const_Decl_List COMMA Const_Decl
+						|
+						(ConstDeclList) Const_Decl
+						;
 
-ConstDecl ::= IDENT EQUAL ConstType;
+Const_Decl ::= (ConstDecl) Const_Name EQUAL Const_Type;
 
-ConstType ::= NUMBER | CHAR | BOOLEAN;
+Const_Name ::= (ConstName) IDENT;
+
+Const_Type ::= 	(ConstTypeNumber) NUMBER 
+				| 
+				(ConstTypeChar) CHAR 
+				| 
+				(ConstTypeBoolean) BOOLEAN
+				;
 
 
 /*	PROMENLJIVE	*/
-VarDeclWrapper ::= 	Type VarDeclList SEMIC;
-
-VarDeclList ::= VarDeclList COMMA VarDecl
-				|
-				VarDecl
-				;
-
-VarDecl ::= IDENT 
-			|
-			IDENT LSBRACE RSBRACE
-			;
+Var_Decl_Globl_Wrapper ::= 	(VarDeclWrapperGlob) Var_Decl_Wrapper
+							|
+							(VarDeclErrors) Glob_Decl_Errors
+							;
 
 
-Type ::= IDENT;
+Var_Decl_Wrapper ::= 	(VarDeclWrapper) Type Var_Decl_List SEMIC
+						;
+						
+Glob_Decl_Errors ::= 	(VarDeclErrorComma) error COMMA
+						{: 
+							parser.log.debug("Uspesan oporavak od greske do , pri deklarisanju globalne promeljive");
+						:}
+						|
+						(VarDeclErrorSemic) error SEMIC
+						{: 
+							parser.log.debug("Uspesan oporavak od greske do ; pri deklarisanju globalne promeljive");
+						:}
+						;
+						
 
-
-MethodDeclList ::= 	MethodDeclList MethodDecl
+Var_Decl_List ::= 	(VarDeclListArray) Var_Decl_List COMMA Var_Decl
 					|
-					/* epsilon */
+					(VarDeclList) Var_Decl
 					;
 
-MethodDecl ::= MethodReturnType IDENT LPAREN FormParsList RPAREN VarDeclMethod LBRACE StatementList RBRACE;
-
-
-VarDeclMethod ::= 	VarDeclMethod VarDeclWrapper
-					|
-					/* epsilon */
-					;
-
-
-MethodReturnType ::= Type | VOID;
-
-FormParsList ::= 	FormParsList COMMA Type VarDecl
-					|
-					Type VarDecl 
-					|
-					/* epsilon */
-					;
-
-
-StatementList ::= 	StatementList Statement
-					|
-					/* epsilon */
-					;
-
-Statement ::= 	DesignatorStatement SEMIC
+Var_Decl ::= 	(VarDecl) IDENT 
 				|
-				IF LPAREN Condition RPAREN Statement
-				|
-				DO Statement WHILE LPAREN Condition RPAREN SEMIC
-				|
-				BREAK SEMIC
-				|
-				CONTINUE SEMIC
-				|
-				RETURN SEMIC
-				|
-				RETURN Expr SEMIC
-				|
-				READ LPAREN Designator RPAREN SEMIC
-				|
-				PRINT LPAREN Expr RPAREN SEMIC 
-				|
-				PRINT LPAREN Expr COMMA NUMBER RPAREN SEMIC
-				|
-				LBRACE Statement RBRACE
+				(VarDeclArray) IDENT LSBRACE RSBRACE
 				;
 
 
+Type ::= (Type) IDENT:typeName;
 
-DesignatorStatement ::= Designator EQUAL Expr
+
+Method_Decl_List ::= 	(MethodDeclList) Method_Decl_List Method_Decl
 						|
-						Designator LPAREN ActPars RPAREN
-						|
-						Designator INC
-						|
-						Designator DEC
+						(NoMethodDeclList) /* epsilon */
 						;
 
-ActPars ::= ActPars COMMA Expr
-			|
-			Expr
-			;
+Method_Decl ::= (MethodDecl) Method_Name LPAREN Form_Pars_List RPAREN Var_Decl_Method LBRACE Statement_List RBRACE;
 
-Condition ::=	Condition OR CondTerm
+Method_Name ::= (MethodName) Method_Return_Type IDENT;
+
+
+Var_Decl_Method ::= 	(VarDeclMethod) Var_Decl_Method Var_Decl_Wrapper
+						|
+						(NoVarDeclMethod) /* epsilon */
+						;
+
+
+Method_Return_Type ::= 	(MethodReturnType) Type 
+						| 
+						(MethodReturnTypeVoid) VOID;
+
+Form_Pars_List ::= 	(FormPars) Form_Pars_List_Exists
+					|
+					(NoFormParsList) /* epsilon */
+					;
+
+Form_Pars_List_Exists ::=	(FormParsListArray) Form_Pars_List_Exists COMMA Form_Param
+							|
+							(FormParsList) Form_Param
+							;
+
+Form_Param ::= (FormParam) Type Var_Decl;
+
+
+Statement_List ::= 	(StatementList) Statement_List Statement
+					|
+					(NoStatementList) /* epsilon */
+					;
+
+Statement ::= 	(StatementDesignator) Designator_Statement SEMIC
 				|
-				CondTerm
-				;
-
-CondTerm ::=	CondTerm AND CondFact
+				(StatementReturn) RETURN SEMIC
 				|
-				CondFact
-				;
-
-CondFact ::=	Expr
+				(StatementReturnExpr) RETURN Expr SEMIC
 				|
-				Expr Relop Expr
-				;
-
-
-
-
-
-Factor ::= 	Designator
-			|
-			Designator LPAREN ActPars RPAREN
-			|
-			NUMBER
-			|
-			CHAR
-			|
-			BOOLEAN
-			|
-			NEW Type
-			|
-			NEW Type LSBRACE Expr RSBRACE
-			|
-			LPAREN Expr RPAREN
-			;
-
-Term ::= 	Term Mulop Factor
-			|
-			Factor
-			;
-
-
-Expr ::= 	Expr Addop Term
-			|
-			MINUS Term 
-			|
-			Term
-			;
-
-
-
-Designator ::= 	Designator LSBRACE Expr RSBRACE
+				(StatementPrint) PRINT LPAREN Expr RPAREN SEMIC 
 				|
-				Designator DOT IDENT
+				(StatementRead) READ LPAREN Designator RPAREN SEMIC
 				|
-				IDENT
+				(StatementPrintArray) PRINT LPAREN Expr COMMA NUMBER RPAREN SEMIC
 				;
 
 
-Relop ::=	EQUAL
-			|
-			IS_NOT_EQUAL
-			|
-			HIGHER
-			|
-			HIGHER_OR_EQUAL
-			|
-			LESS
-			|
-			LESS_OR_EQUAL
-			;	
 
-Addop ::=	PLUS
+Designator_Statement ::= 	(DesignatorStatementEqual) Designator EQUAL Expr
+							|
+							(DesignatorStatementEqualError) Designator EQUAL error COMMA
+							{: 
+								parser.log.debug("Uspesan oporavak od greske do , pri dodeli vrednosti");
+							:}
+							|
+							(StatementDesignatorParent) Designator_Call_Method LPAREN RPAREN
+							|
+							(StatementDesignatorParentActPars) Designator_Call_Method LPAREN Act_Pars RPAREN
+							|
+							(DesignatorStatementInc) Designator INC
+							|
+							(DesignatorStatementDec) Designator DEC
+							;
+
+Designator_Call_Method ::= (DesignatorCallMethod) Designator;
+
+Act_Pars ::= 	(ActParsArray) Act_Pars COMMA Act_Par
+				|
+				(ActParsExpr) Act_Par
+				;
+
+Act_Par ::= (ActPar) Expr;
+
+
+
+Factor ::= 	(FactorDesignator) Designator
 			|
-			MINUS
+			(FactorDesignatorMeth) Designator_Call_Method LPAREN RPAREN
+			|
+			(FactorDesignatorPars) Designator_Call_Method LPAREN Act_Pars RPAREN
+			|
+			(Const) NUMBER
+			|
+			(Char) CHAR
+			|
+			(Bool) BOOLEAN
+			|
+			(NewType) NEW Type
+			|
+			(NewTypeBrace) NEW Type LSBRACE Expr RSBRACE
+			|
+			(ExprParen) LPAREN Expr RPAREN
 			;
 
-Mulop ::=	MUL
+Term ::= 	(TermAdd) Term Mul_op Factor
 			|
-			DIV
+			(TermOne) Factor
+			;
+
+
+Expr ::=	(ExprMinus) MINUS Term Expr_Para
 			|
-			PERC
+			(ExprOne) Term Expr_Para
+			;
+				
+
+Expr_Para ::=	(ExprPara) Add_op Term Expr_Para
+				|
+				(NoExprPara) /* epsilon */
+				;
+
+
+
+Designator ::= 	(DesignatorAdd) IDENT Ar_Array
+				|
+				(DesignatorIdent) IDENT
+				;
+
+Ar_Array ::= (ArArray) Ar_Last Expr RSBRACE;
+Ar_Last ::= (ArLast) LSBRACE;
+
+
+
+Add_op ::=	(AddOp) PLUS
+			|
+			(SubbOp) MINUS
+			;
+
+Mul_op ::=	(MulOp) MUL
+			|
+			(DivOp) DIV
+			|
+			(PercOp) PERC
 			;
 
 

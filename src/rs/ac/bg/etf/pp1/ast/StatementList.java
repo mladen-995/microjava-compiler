@@ -1,37 +1,78 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/5/2018 12:50:18
+// 24/5/2018 10:49:11
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class StatementList implements SyntaxNode {
+public class StatementList extends Statement_List {
 
-    private SyntaxNode parent;
+    private Statement_List Statement_List;
+    private Statement Statement;
 
-    private int line;
-
-    public SyntaxNode getParent() {
-        return parent;
+    public StatementList (Statement_List Statement_List, Statement Statement) {
+        this.Statement_List=Statement_List;
+        if(Statement_List!=null) Statement_List.setParent(this);
+        this.Statement=Statement;
+        if(Statement!=null) Statement.setParent(this);
     }
 
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
+    public Statement_List getStatement_List() {
+        return Statement_List;
     }
 
-    public int getLine() {
-        return line;
+    public void setStatement_List(Statement_List Statement_List) {
+        this.Statement_List=Statement_List;
     }
 
-    public void setLine(int line) {
-        this.line=line;
+    public Statement getStatement() {
+        return Statement;
     }
 
-    public abstract void accept(Visitor visitor);
-    public abstract void childrenAccept(Visitor visitor);
-    public abstract void traverseTopDown(Visitor visitor);
-    public abstract void traverseBottomUp(Visitor visitor);
+    public void setStatement(Statement Statement) {
+        this.Statement=Statement;
+    }
 
-    public String toString() { return toString(""); }
-    public abstract String toString(String tab);
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public void childrenAccept(Visitor visitor) {
+        if(Statement_List!=null) Statement_List.accept(visitor);
+        if(Statement!=null) Statement.accept(visitor);
+    }
+
+    public void traverseTopDown(Visitor visitor) {
+        accept(visitor);
+        if(Statement_List!=null) Statement_List.traverseTopDown(visitor);
+        if(Statement!=null) Statement.traverseTopDown(visitor);
+    }
+
+    public void traverseBottomUp(Visitor visitor) {
+        if(Statement_List!=null) Statement_List.traverseBottomUp(visitor);
+        if(Statement!=null) Statement.traverseBottomUp(visitor);
+        accept(visitor);
+    }
+
+    public String toString(String tab) {
+        StringBuffer buffer=new StringBuffer();
+        buffer.append(tab);
+        buffer.append("StatementList(\n");
+
+        if(Statement_List!=null)
+            buffer.append(Statement_List.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(Statement!=null)
+            buffer.append(Statement.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(tab);
+        buffer.append(") [StatementList]");
+        return buffer.toString();
+    }
 }

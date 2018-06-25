@@ -1,37 +1,58 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/5/2018 12:50:18
+// 24/5/2018 10:49:11
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class VarDeclList implements SyntaxNode {
+public class VarDeclList extends Var_Decl_List {
 
-    private SyntaxNode parent;
+    private Var_Decl Var_Decl;
 
-    private int line;
-
-    public SyntaxNode getParent() {
-        return parent;
+    public VarDeclList (Var_Decl Var_Decl) {
+        this.Var_Decl=Var_Decl;
+        if(Var_Decl!=null) Var_Decl.setParent(this);
     }
 
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
+    public Var_Decl getVar_Decl() {
+        return Var_Decl;
     }
 
-    public int getLine() {
-        return line;
+    public void setVar_Decl(Var_Decl Var_Decl) {
+        this.Var_Decl=Var_Decl;
     }
 
-    public void setLine(int line) {
-        this.line=line;
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 
-    public abstract void accept(Visitor visitor);
-    public abstract void childrenAccept(Visitor visitor);
-    public abstract void traverseTopDown(Visitor visitor);
-    public abstract void traverseBottomUp(Visitor visitor);
+    public void childrenAccept(Visitor visitor) {
+        if(Var_Decl!=null) Var_Decl.accept(visitor);
+    }
 
-    public String toString() { return toString(""); }
-    public abstract String toString(String tab);
+    public void traverseTopDown(Visitor visitor) {
+        accept(visitor);
+        if(Var_Decl!=null) Var_Decl.traverseTopDown(visitor);
+    }
+
+    public void traverseBottomUp(Visitor visitor) {
+        if(Var_Decl!=null) Var_Decl.traverseBottomUp(visitor);
+        accept(visitor);
+    }
+
+    public String toString(String tab) {
+        StringBuffer buffer=new StringBuffer();
+        buffer.append(tab);
+        buffer.append("VarDeclList(\n");
+
+        if(Var_Decl!=null)
+            buffer.append(Var_Decl.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(tab);
+        buffer.append(") [VarDeclList]");
+        return buffer.toString();
+    }
 }

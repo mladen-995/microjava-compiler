@@ -1,0 +1,272 @@
+INFO  17:05:55,957 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\bin\..\test\program.mj
+INFO  17:05:55,997 - #2 program
+INFO  17:05:55,997 - #28 test301
+INFO  17:05:55,997 - #7 const
+INFO  17:05:55,998 - #28 int
+INFO  17:05:55,998 - #28 p
+INFO  17:05:55,999 - #10 =
+INFO  17:05:55,999 - #25 2
+INFO  17:05:55,999 - #8 ;
+INFO  17:05:55,999 - #3 {
+INFO  17:05:55,999 - #17 void
+INFO  17:05:56,000 - #28 main
+INFO  17:05:56,001 - #18 (
+INFO  17:05:56,001 - #6 )
+INFO  17:05:56,001 - #28 int
+INFO  17:05:56,002 - #28 bodovi
+INFO  17:05:56,002 - #8 ;
+INFO  17:05:56,002 - #28 int
+INFO  17:05:56,002 - #28 n
+INFO  17:05:56,003 - #11 [
+INFO  17:05:56,003 - #12 ]
+INFO  17:05:56,003 - #8 ;
+INFO  17:05:56,003 - #28 int
+INFO  17:05:56,003 - #28 p
+INFO  17:05:56,003 - #8 ;
+INFO  17:05:56,003 - #3 {
+INFO  17:05:56,003 - #28 n
+INFO  17:05:56,004 - #10 =
+INFO  17:05:56,004 - #13 new
+INFO  17:05:56,004 - #28 int
+INFO  17:05:56,004 - #11 [
+INFO  17:05:56,004 - #25 4
+INFO  17:05:56,004 - #12 ]
+INFO  17:05:56,005 - #8 ;
+INFO  17:05:56,005 - #28 n
+INFO  17:05:56,005 - #11 [
+INFO  17:05:56,005 - #25 1
+INFO  17:05:56,006 - #5 +
+INFO  17:05:56,006 - #25 1
+INFO  17:05:56,007 - #12 ]
+INFO  17:05:56,007 - #10 =
+INFO  17:05:56,007 - #25 3
+INFO  17:05:56,008 - #8 ;
+INFO  17:05:56,008 - #22 print
+INFO  17:05:56,008 - #18 (
+INFO  17:05:56,008 - #28 n
+INFO  17:05:56,008 - #11 [
+INFO  17:05:56,008 - #25 3
+INFO  17:05:56,008 - #15 -
+INFO  17:05:56,008 - #25 1
+INFO  17:05:56,009 - #12 ]
+INFO  17:05:56,009 - #6 )
+INFO  17:05:56,009 - #8 ;
+INFO  17:05:56,009 - #4 }
+INFO  17:05:56,009 - #4 }
+========================Ispis sintaksnog stabla=========================
+Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ProgramDeclList(
+    NoProgramDeclList(
+    ) [NoProgramDeclList]
+    ProgramDeclConst(
+      ConstDeclWrapper(
+        Type(
+         int
+        ) [Type]
+        ConstDeclList(
+          ConstDecl(
+            ConstName(
+             p
+            ) [ConstName]
+            ConstTypeNumber(
+             2
+            ) [ConstTypeNumber]
+          ) [ConstDecl]
+        ) [ConstDeclList]
+      ) [ConstDeclWrapper]
+    ) [ProgramDeclConst]
+  ) [ProgramDeclList]
+  MethodDeclList(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    MethodDecl(
+      MethodName(
+        MethodReturnTypeVoid(
+        ) [MethodReturnTypeVoid]
+       main
+      ) [MethodName]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarDeclMethod(
+        VarDeclMethod(
+          VarDeclMethod(
+            NoVarDeclMethod(
+            ) [NoVarDeclMethod]
+            VarDeclWrapper(
+              Type(
+               int
+              ) [Type]
+              VarDeclList(
+                VarDecl(
+                 bodovi
+                ) [VarDecl]
+              ) [VarDeclList]
+            ) [VarDeclWrapper]
+          ) [VarDeclMethod]
+          VarDeclWrapper(
+            Type(
+             int
+            ) [Type]
+            VarDeclList(
+              VarDeclArray(
+               n
+              ) [VarDeclArray]
+            ) [VarDeclList]
+          ) [VarDeclWrapper]
+        ) [VarDeclMethod]
+        VarDeclWrapper(
+          Type(
+           int
+          ) [Type]
+          VarDeclList(
+            VarDecl(
+             p
+            ) [VarDecl]
+          ) [VarDeclList]
+        ) [VarDeclWrapper]
+      ) [VarDeclMethod]
+      StatementList(
+        StatementList(
+          StatementList(
+            NoStatementList(
+            ) [NoStatementList]
+            StatementDesignator(
+              DesignatorStatementEqual(
+                DesignatorIdent(
+                 n
+                ) [DesignatorIdent]
+                ExprOne(
+                  TermOne(
+                    NewTypeBrace(
+                      Type(
+                       int
+                      ) [Type]
+                      ExprOne(
+                        TermOne(
+                          Const(
+                           4
+                          ) [Const]
+                        ) [TermOne]
+                        NoExprPara(
+                        ) [NoExprPara]
+                      ) [ExprOne]
+                    ) [NewTypeBrace]
+                  ) [TermOne]
+                  NoExprPara(
+                  ) [NoExprPara]
+                ) [ExprOne]
+              ) [DesignatorStatementEqual]
+            ) [StatementDesignator]
+          ) [StatementList]
+          StatementDesignator(
+            DesignatorStatementEqual(
+              DesignatorAdd(
+               n
+                ArArray(
+                  ArLast(
+                  ) [ArLast]
+                  ExprOne(
+                    TermOne(
+                      Const(
+                       1
+                      ) [Const]
+                    ) [TermOne]
+                    ExprPara(
+                      AddOp(
+                      ) [AddOp]
+                      TermOne(
+                        Const(
+                         1
+                        ) [Const]
+                      ) [TermOne]
+                      NoExprPara(
+                      ) [NoExprPara]
+                    ) [ExprPara]
+                  ) [ExprOne]
+                ) [ArArray]
+              ) [DesignatorAdd]
+              ExprOne(
+                TermOne(
+                  Const(
+                   3
+                  ) [Const]
+                ) [TermOne]
+                NoExprPara(
+                ) [NoExprPara]
+              ) [ExprOne]
+            ) [DesignatorStatementEqual]
+          ) [StatementDesignator]
+        ) [StatementList]
+        StatementPrint(
+          ExprOne(
+            TermOne(
+              FactorDesignator(
+                DesignatorAdd(
+                 n
+                  ArArray(
+                    ArLast(
+                    ) [ArLast]
+                    ExprOne(
+                      TermOne(
+                        Const(
+                         3
+                        ) [Const]
+                      ) [TermOne]
+                      ExprPara(
+                        SubbOp(
+                        ) [SubbOp]
+                        TermOne(
+                          Const(
+                           1
+                          ) [Const]
+                        ) [TermOne]
+                        NoExprPara(
+                        ) [NoExprPara]
+                      ) [ExprPara]
+                    ) [ExprOne]
+                  ) [ArArray]
+                ) [DesignatorAdd]
+              ) [FactorDesignator]
+            ) [TermOne]
+            NoExprPara(
+            ) [NoExprPara]
+          ) [ExprOne]
+        ) [StatementPrint]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+========================Semanticka analiza===========================
+INFO  17:05:56,015 - Pretraga simbola n na liniji 12
+INFO  17:05:56,015 - Simbol n pronadjen na liniji 12
+INFO  17:05:56,016 - Pretraga simbola n na liniji 13
+INFO  17:05:56,016 - Simbol n pronadjen na liniji 13
+=====================SYMBOL TABLE DUMP=========================
+Type int: int, -1, -1 
+Type char: char, -1, -1 
+Con eol: char, 10, 0 
+Con null: Class [], 0, 0 
+Meth chr: char, 0, 1 
+   Var i: int, 0, 1 
+
+Meth ord: int, 0, 1 
+   Var ch: char, 0, 1 
+
+Meth len: int, 0, 1 
+   Var arr: Arr of notype, 0, 1 
+
+Type bool: , -1, -1 
+Prog test301: notype, 0, 1 
+   Con p: int, 2, 0 
+   Meth main: notype, 0, 0 
+      Var bodovi: int, 0, 1 
+      Var n: Arr of int, 1, 1 
+      Var p: int, 2, 1 
+
+
+
+INFO  17:05:56,017 - Generisanje bajtkod fajla: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\bin\..\test\ime.obj
+INFO  17:05:56,022 - Parsiranje uspesno zavrseno!

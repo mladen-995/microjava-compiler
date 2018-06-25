@@ -1,37 +1,78 @@
 // generated with ast extension for cup
 // version 0.8
-// 10/5/2018 12:50:18
+// 24/5/2018 10:49:11
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class VarDeclMethod implements SyntaxNode {
+public class VarDeclMethod extends Var_Decl_Method {
 
-    private SyntaxNode parent;
+    private Var_Decl_Method Var_Decl_Method;
+    private Var_Decl_Wrapper Var_Decl_Wrapper;
 
-    private int line;
-
-    public SyntaxNode getParent() {
-        return parent;
+    public VarDeclMethod (Var_Decl_Method Var_Decl_Method, Var_Decl_Wrapper Var_Decl_Wrapper) {
+        this.Var_Decl_Method=Var_Decl_Method;
+        if(Var_Decl_Method!=null) Var_Decl_Method.setParent(this);
+        this.Var_Decl_Wrapper=Var_Decl_Wrapper;
+        if(Var_Decl_Wrapper!=null) Var_Decl_Wrapper.setParent(this);
     }
 
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
+    public Var_Decl_Method getVar_Decl_Method() {
+        return Var_Decl_Method;
     }
 
-    public int getLine() {
-        return line;
+    public void setVar_Decl_Method(Var_Decl_Method Var_Decl_Method) {
+        this.Var_Decl_Method=Var_Decl_Method;
     }
 
-    public void setLine(int line) {
-        this.line=line;
+    public Var_Decl_Wrapper getVar_Decl_Wrapper() {
+        return Var_Decl_Wrapper;
     }
 
-    public abstract void accept(Visitor visitor);
-    public abstract void childrenAccept(Visitor visitor);
-    public abstract void traverseTopDown(Visitor visitor);
-    public abstract void traverseBottomUp(Visitor visitor);
+    public void setVar_Decl_Wrapper(Var_Decl_Wrapper Var_Decl_Wrapper) {
+        this.Var_Decl_Wrapper=Var_Decl_Wrapper;
+    }
 
-    public String toString() { return toString(""); }
-    public abstract String toString(String tab);
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public void childrenAccept(Visitor visitor) {
+        if(Var_Decl_Method!=null) Var_Decl_Method.accept(visitor);
+        if(Var_Decl_Wrapper!=null) Var_Decl_Wrapper.accept(visitor);
+    }
+
+    public void traverseTopDown(Visitor visitor) {
+        accept(visitor);
+        if(Var_Decl_Method!=null) Var_Decl_Method.traverseTopDown(visitor);
+        if(Var_Decl_Wrapper!=null) Var_Decl_Wrapper.traverseTopDown(visitor);
+    }
+
+    public void traverseBottomUp(Visitor visitor) {
+        if(Var_Decl_Method!=null) Var_Decl_Method.traverseBottomUp(visitor);
+        if(Var_Decl_Wrapper!=null) Var_Decl_Wrapper.traverseBottomUp(visitor);
+        accept(visitor);
+    }
+
+    public String toString(String tab) {
+        StringBuffer buffer=new StringBuffer();
+        buffer.append(tab);
+        buffer.append("VarDeclMethod(\n");
+
+        if(Var_Decl_Method!=null)
+            buffer.append(Var_Decl_Method.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(Var_Decl_Wrapper!=null)
+            buffer.append(Var_Decl_Wrapper.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(tab);
+        buffer.append(") [VarDeclMethod]");
+        return buffer.toString();
+    }
 }

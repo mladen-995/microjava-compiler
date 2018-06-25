@@ -1,0 +1,54 @@
+program SemTest
+const int i = 4;
+const int ii = 4, iii = 4;
+const char c = 'c';
+const char cc = 'c', ccc = 'C';
+const bool b = true;
+const bool bb = true, bbb = false;
+int o, oo;
+int p;
+int pp[];
+char d, dd;
+char ddd;
+char ddddd[];
+bool z, zzz;
+bool zz;
+bool zzzz[];
+char o;
+bool ii;
+{
+void f1() int k; bool kk; char kkk;{
+	p = 1;
+	k = true;
+	kk = 'c';
+	kkk = 254112;	
+}
+
+int f2(int k) int p; {
+	
+}
+
+
+void main(){
+	z = false;
+	pp = o;
+	p = 'c';
+	p = f1();
+	print('s' + 'd');
+	print(pp);
+	ddddd = new char[2];
+	zzzz = new char[2];
+	zzzz = new int[2];
+	zzzz = new bool[2];
+	zzzz[1] = true;
+	read(zzzz[1]);
+	read(z);
+	read(pp[1]);
+	read(p);
+	read(ddddd[1]);
+	read(d);
+	f1();
+	f2('c');
+	dwadj();
+}
+}

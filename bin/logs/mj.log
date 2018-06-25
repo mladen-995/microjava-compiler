@@ -1,0 +1,61 @@
+INFO  17:05:55,957 - Compiling source file: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\bin\..\test\program.mj
+INFO  17:05:55,997 - #2 program
+INFO  17:05:55,997 - #28 test301
+INFO  17:05:55,997 - #7 const
+INFO  17:05:55,998 - #28 int
+INFO  17:05:55,998 - #28 p
+INFO  17:05:55,999 - #10 =
+INFO  17:05:55,999 - #25 2
+INFO  17:05:55,999 - #8 ;
+INFO  17:05:55,999 - #3 {
+INFO  17:05:55,999 - #17 void
+INFO  17:05:56,000 - #28 main
+INFO  17:05:56,001 - #18 (
+INFO  17:05:56,001 - #6 )
+INFO  17:05:56,001 - #28 int
+INFO  17:05:56,002 - #28 bodovi
+INFO  17:05:56,002 - #8 ;
+INFO  17:05:56,002 - #28 int
+INFO  17:05:56,002 - #28 n
+INFO  17:05:56,003 - #11 [
+INFO  17:05:56,003 - #12 ]
+INFO  17:05:56,003 - #8 ;
+INFO  17:05:56,003 - #28 int
+INFO  17:05:56,003 - #28 p
+INFO  17:05:56,003 - #8 ;
+INFO  17:05:56,003 - #3 {
+INFO  17:05:56,003 - #28 n
+INFO  17:05:56,004 - #10 =
+INFO  17:05:56,004 - #13 new
+INFO  17:05:56,004 - #28 int
+INFO  17:05:56,004 - #11 [
+INFO  17:05:56,004 - #25 4
+INFO  17:05:56,004 - #12 ]
+INFO  17:05:56,005 - #8 ;
+INFO  17:05:56,005 - #28 n
+INFO  17:05:56,005 - #11 [
+INFO  17:05:56,005 - #25 1
+INFO  17:05:56,006 - #5 +
+INFO  17:05:56,006 - #25 1
+INFO  17:05:56,007 - #12 ]
+INFO  17:05:56,007 - #10 =
+INFO  17:05:56,007 - #25 3
+INFO  17:05:56,008 - #8 ;
+INFO  17:05:56,008 - #22 print
+INFO  17:05:56,008 - #18 (
+INFO  17:05:56,008 - #28 n
+INFO  17:05:56,008 - #11 [
+INFO  17:05:56,008 - #25 3
+INFO  17:05:56,008 - #15 -
+INFO  17:05:56,008 - #25 1
+INFO  17:05:56,009 - #12 ]
+INFO  17:05:56,009 - #6 )
+INFO  17:05:56,009 - #8 ;
+INFO  17:05:56,009 - #4 }
+INFO  17:05:56,009 - #4 }
+INFO  17:05:56,015 - Pretraga simbola n na liniji 12
+INFO  17:05:56,015 - Simbol n pronadjen na liniji 12
+INFO  17:05:56,016 - Pretraga simbola n na liniji 13
+INFO  17:05:56,016 - Simbol n pronadjen na liniji 13
+INFO  17:05:56,017 - Generisanje bajtkod fajla: C:\Users\Mladen\Desktop\PROJEKTI\PP PROJEKAT\_MLADEN11\workspace\MJCompiler\bin\..\test\ime.obj
+INFO  17:05:56,022 - Parsiranje uspesno zavrseno!
